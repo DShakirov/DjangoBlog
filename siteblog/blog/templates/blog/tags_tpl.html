@@ -1,0 +1,13 @@
+<div class="sidebar-item tags">
+                    <div class="sidebar-heading">
+                      <h2>Tag Clouds</h2>
+                    </div>
+                    <div class="content">
+
+                        <ul>
+                      {% for tag in tags %}
+                        <li><a href=" {{tag.get_absolute_url}} "> {{ tag.title }} </a></li>
+                      {% endfor %}
+                      </ul>
+                    </div>
+</div>

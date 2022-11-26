@@ -1,0 +1,18 @@
+
+      <div class="{{ menu_class_footer }}">
+        <div class="row">
+         <div class="col-lg-12" >
+
+
+        <ul class="social-icons">
+            <li><a href="{% url 'home' %}">Home</a></li>
+               {% for item in categories %}
+              <li><a href="{{ item.get_absolute_url}}">{{ item.title }}</a></li>
+                {% endfor %}
+             </ul>
+
+
+
+        </div>
+        </div>
+          </div>

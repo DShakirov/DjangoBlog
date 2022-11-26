@@ -1,0 +1,31 @@
+<div class="main-banner header-text">
+    <div class="container-fluid">
+        <div class="owl-banner owl-carousel">
+            {% for post in posts%}
+                <div class="item">
+            {% if post.photo %}
+            <img src="{{ post.photo.url }}" alt="" height="450">
+                 {% else %}
+                    <img src="https://loremflickr.com/320/240/brazil,rio" alt="" height="450">
+                    {% endif %}
+            <div class="item-content">
+              <div class="main-content">
+                <div class="meta-category">
+                  <span>{{ post.category }}</span>
+                </div>
+                <a href="{{ post.get_absolute_url }}"><h4>{{ post.title }}</h4></a>
+                <ul class="post-info">
+                               {% if post.author %}
+                        <li>{{ post.author }}</li>
+                        {% endif %}
+                  <li><a href="{{ post.get_absolute_url }}">{{ post.created_at }}</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+    {% endfor %}
+
+        </div>
+      </div>
+    </div>

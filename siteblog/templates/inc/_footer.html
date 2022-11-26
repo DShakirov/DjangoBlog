@@ -1,0 +1,14 @@
+{% load menu %}
+{% load cache%}
+{% cache 30 footer %}
+<footer>
+      <div class="{{menu_class}}}">
+        <div class="row">
+         <div class="col-lg-12" >
+{%show_menu_footer%}
+        </div>
+
+        </div>
+      </div>
+    </footer>
+{% endcache %}
